@@ -32,6 +32,6 @@ Here are the steps to use Cotracker to generate the tracking results, if you hav
 
 ## Usage for DFE
  
-Please follow the instructions in the subfolder "DFE_torch".
+Please follow the instructions in the subfolder [DFE_torch](https://github.com/Peter890206/Skin-Feature-Tracking/tree/main/Peter_DFE/DFE_torch).
 
 
