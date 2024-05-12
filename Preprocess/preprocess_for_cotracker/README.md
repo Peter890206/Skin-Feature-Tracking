@@ -36,21 +36,7 @@ If you are generating the center for cropping ground truth frames, you should up
 If you are generating the coordinates of tracking points for Cotracker or center for cropping videos, you should upload the csv file in our "nordlinglab-digitalupdrs-data" repository.
  
 
-### Enviroment setup
 
-The python version here is what I was using in my computer.
-It should be fine if you use the other version, but if you have any problem, please use the same version.
-
-**frame2video.py and choose_tracking_point.py** need the following packages:
-1. python 3.9.13
-2. opencv-python 4.8.1.78
-3. regex 2022.7.9
-4. pandas 1.4.4
-
-**crop_video.py** need the following packages:
-1. python 3.8.18
-2. moviepy 1.0.3
-3. pandas 1.4.4
 
 
 

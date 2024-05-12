@@ -8,15 +8,14 @@ Futhermore, the **DFE_eval_torch.py** is used for evaluation.
 ### Tracking
 
 If you want to run the DFE tracking code, please prepare the input data first.
-1. If you want to track the whole video, you can use **crop_video.py** in "\nordlinglab-digitalupdrs\Preprocess\preprocess_for_cotracker" to crop the video to suitable size.
-Subsequently, you can use the **video_frame2image.py** in "\nordlinglab-digitalupdrs\Preprocess\preprocess_for_DFE" to convert the video to images.
-2. If you want to use Cotracker-DFE, you need to use the **crop_image.py** and following the steps in **README.md** in "\nordlinglab-digitalupdrs\Preprocess\preprocess_for_DFE".
+1. If you want to track the whole video, you can use **crop_video.py** in "Skin-Feature-Tracking\Preprocess\preprocess_for_cotracker" to crop the video to suitable size.
+Subsequently, you can use the **video_frame2image.py** in "Skin-Feature-Tracking\Preprocess\preprocess_for_DFE" to convert the video to images.
+2. If you want to use Cotracker-DFE, you need to use the **crop_image.py** and following the steps in **README.md** in "Skin-Feature-Tracking\Preprocess\preprocess_for_DFE".
 
 ### Training
 
 If you want to train the DFE autoencoder, please prepare the training dataset first.
-You can download the dataset in "DigitalUPDRS/QPD_Shared/Peter_DFE_Training_Dataset" in our NAS.
-If you want to create your own dataset, you can use the **data_preprocess.py** in "nordlinglab-digitalupdrs\Process_Video_Deep_Learning_Tracking_Peter\Preprocess\preprocess_for_val_data" and follow the instruction in the **README.md**.
+If you want to create your own dataset, you can use the **data_preprocess.py** in "Skin-Feature-Tracking\Preprocess\preprocess_for_val_data" and follow the instruction in the **README.md**.
 
 [added by Peter]
 
@@ -40,16 +39,6 @@ Run the following command to build the image:
 The dfe_torch_image here is the image name, you can change it.
 Once you build the image, you can run the following command to run the image:
     `sudo docker run -it --gpus=all --ipc=host -v (your folder path):(folder path in the container) --name=(your container name) dfe_torch_image bash`
-If you want to check the command detailly, please check the presentation in "NordlingLab/All_Presentations/Presentations_Lab/Peter_docker_introduction_231003.pptx" in our NAS.
-
-- **Option 3 (Most Recommended)**:
-Download and load the image tar file.
-The image.tar file can be found in the folder "DigitalUPDRS/QPD_Shared/Peter_DFE_Docker_Env" in our NAS.
-You can just download it and use following command to load the image:
-    `sudo docker load -i image.tar`
-Once you build the image, you can run the following command to run the image:
-    `sudo docker run -it --gpus=all --ipc=host -v (your folder path):(folder path in the container) --name=(your container name) dfe_torch_image bash`
-If you want to check the command detailly, please check the presentation in "NordlingLab/All_Presentations/Presentations_Lab/Peter_docker_introduction_231003.pptx" in our NAS.
 
 
 ## How to use **DFE_tracking_torch_Peter.py**?
@@ -85,7 +74,7 @@ If you don't want to use distributed training, using `python -m torch.distribute
 **1.** Firstly, check you are in the correct enviroment.
 
 **2.** Setup the configuration in the parser, such as the input and output path.
-We used the test data to evaluate our model, where the data is create from "validation_data_create.py" in "nordlinglab-digitalupdrs\Process_Video_Deep_Learning_Tracking_Peter\Preprocess\preprocess_for_val_data".
+We used the test data to evaluate our model, where the data is create from "validation_data_create.py" in "Skin-Feature-Tracking\Preprocess\preprocess_for_val_data".
 
 **3.** Select the model backbone you want to use, and load the correspond checkpoint path (for finetune).
 If you want to load the pretrain weights, you can download them from "DigitalUPDRS/QPD_Shared/Peter_DFE_Training_Weights" in our NAS.
@@ -99,11 +88,11 @@ If when you use the distributed training, you find that all of the GPUS stock in
 1. Check you are in the correct environment.
 2. Check your environment variables: "NCCL_P2P_DISABLE=1", by using `echo $NCCL_P2P_DISABLE`.
 If you want to set the environment variables, using `export NCCL_P2P_DISABLE=1`.
-3. CHeck the IOMMU in the BIOS is disable.
+3. Check the IOMMU in the BIOS is disable.
 
 ##Notes:
 
-If you want to change the model structure, please check "nordlinglab-digitalupdrs\Process_Video_Deep_Learning_Tracking_Peter\Peter_DFE\models".
+If you want to change the model structure, please check "Skin-Feature-Tracking\Peter_DFE\models".
 
 
 

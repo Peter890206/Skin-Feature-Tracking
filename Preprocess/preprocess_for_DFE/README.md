@@ -23,16 +23,6 @@ The **video_frame2image.py** is to convert the video to images for DFE.
 **3.** Run the code.
 
 
-### Enviroment setup
-
-The python version here is what I was using in my computer.
-It should be fine if you use the other version, but if you have any problem, please use the same version.
-
-
-1. python 3.9.13
-2. numpy 1.23.5
-3. opencv-python 4.8.1.78
-
 
 ### Notes
 

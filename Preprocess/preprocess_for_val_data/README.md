@@ -46,17 +46,6 @@ The newest position in the same frame will cover the old one, so you can check t
 **5.** Run the code.
 
 
-### Enviroment setup
-
-The python version here is what I was using in my computer.
-It should be fine if you use the other version, but if you have any problem, please use the same version.
-
-
-1. python 3.9.13
-2. numpy 1.23.5
-3. opencv-python 4.8.1.78
-4. tqdm 4.64.1
-
 
 
 
