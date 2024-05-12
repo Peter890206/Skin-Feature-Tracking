@@ -7,7 +7,7 @@
 - The folder "models" contains all the model structures and "utils" contains all the utility functions for the both DFE tensorflow and PyTorch.
 
 - The folder "checkpoints" contains all the trained models for both DFE tensorflow and PyTorch, if you don't have the folder, please use `mkdir checkpoints` to create it.
-After that, you can download the trained weights from our NAS (DigitalUPDRS/QPD_Shared/Peter_DFE_Training_Weights).
+After that, you can download the trained weights from [Model Weights](https://drive.google.com/file/d/1RvRMHysE1Wd5FupI3B0ZFzJgaHHONHYW/view?usp=sharing).
 
 ## How to use?
 

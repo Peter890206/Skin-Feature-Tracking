@@ -9,14 +9,7 @@ We only use **Peter_demo.py** to track the point in our project.
 
 ## Environment Setup
 
-Using docker to build the image.
-Download and load the image tar file.
-The image.tar file can be found in the folder "DigitalUPDRS/QPD_Shared/Peter_DFE_Docker_Env" in our NAS.
-You can just download it and use following command to load the image:
-    `sudo docker load -i cotracker_image.tar`
-Once you build the image, you can run the following command to run the image:
-    `sudo docker run -it --gpus=all --ipc=host -v (your folder path):(folder path in the container) --name=(your container name) cotracker_image bash`
-If you want to check the command detailly, please check the presentation in "NordlingLab/All_Presentations/Presentations_Lab/Peter_docker_introduction_231003.pptx" in our NAS.
+
 
 ## How to use?
 

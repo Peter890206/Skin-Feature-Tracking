@@ -64,7 +64,7 @@ If you are not using Cotracker-DFE, just comment the part of Cotracker out.
 **2.** Setup the configuration in the parser, such as the input and output path, batch size, learning rate and epochs.
 
 **3.** Select the model backbone you want to use, and load the correspond checkpoint path (for finetune).
-If you want to load the pretrain weights, you can download them from "DigitalUPDRS/QPD_Shared/Peter_DFE_Training_Weights" in our NAS.
+If you want to load the pretrain weights, you can download them from [Model Weights](https://drive.google.com/file/d/1RvRMHysE1Wd5FupI3B0ZFzJgaHHONHYW/view?usp=sharing).
 
 **4.** Using `python -m torch.distributed.run --nproc_per_node=n DFE_train_torch.py` to run the code, where the n is the number of GPUS you want to use.
 If you don't want to use distributed training, using `python -m torch.distributed.run --nproc_per_node=1 DFE_train_torch.py` to run the code.
